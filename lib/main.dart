@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiretell/edit_item_dialog.dart';
+import 'package:logger/logger.dart';
 import 'dart:async';
 import 'package:uuid/uuid.dart';
 import 'add_item_dialog.dart';
@@ -8,6 +9,7 @@ import 'shoppingItem.dart';
 import 'shopping_item_db.dart';
 
 var uuid = Uuid();
+var logger = Logger();
 
 void main() {
   runApp(const MyApp());
@@ -119,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 future: initShoppingItems(),
                 builder: (var context, var snapshot) {
                   if (snapshot.hasError) {
-                    print(snapshot.error);
+                    logger.e(snapshot.error);
                     return const Text("エラーが発生しました");
                   }
 
@@ -136,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 future: initShoppingItems(),
                 builder: (var context, var snapshot) {
                   if (snapshot.hasError) {
-                    print(snapshot.error);
+                    logger.e(snapshot.error);
                     return const Text("エラーが発生しました");
                   }
 
