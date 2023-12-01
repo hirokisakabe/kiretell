@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:kiretell/shoppingItem.dart';
+import 'package:kiretell/model/shopping_item.dart';
 
 class EditItemDialog extends StatefulWidget {
   const EditItemDialog(

@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:sqflite/sqflite.dart';
-import 'database.dart';
-import 'shoppingItem.dart';
+import '../config/database.dart';
+import '../model/shopping_item.dart';
 
-class ShoppingItemDB {
+class ShoppingItemService {
   late Future<Database> database;
 
   Future<void> initialize() async {
