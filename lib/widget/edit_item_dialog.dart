@@ -61,7 +61,9 @@ class _EditItemDialogState extends State<EditItemDialog> {
                         needToBuy: widget.shoppingItem.needToBuy,
                       );
                       await widget.onClickEditButton(newItem);
-                      Navigator.pop(context);
+                      if (context.mounted) {
+                        Navigator.pop(context);
+                      }
                     },
                     child: const Text('完了'))
               ],

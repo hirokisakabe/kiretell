@@ -45,7 +45,9 @@ class _AddItemDialogState extends State<AddItemDialog> {
                 FilledButton(
                     onPressed: () async {
                       await widget.onClickAddButton(textEditingController.text);
-                      Navigator.pop(context);
+                      if (context.mounted) {
+                        Navigator.pop(context);
+                      }
                     },
                     child: const Text('追加'))
               ],
