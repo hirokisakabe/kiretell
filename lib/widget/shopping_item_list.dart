@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'shoppingItem.dart';
+import '../model/shopping_item.dart';
 
-class ItemListWidget extends StatefulWidget {
-  const ItemListWidget(
+class ShoppingItemList extends StatefulWidget {
+  const ShoppingItemList(
       {super.key,
       required this.shoppingItems,
       required this.onPressedEditButton,
@@ -16,10 +16,10 @@ class ItemListWidget extends StatefulWidget {
   final void Function(String, bool) onPressedCheckButton;
 
   @override
-  State<ItemListWidget> createState() => _ItemListWidgetState();
+  State<ShoppingItemList> createState() => _ShoppingItemListState();
 }
 
-class _ItemListWidgetState extends State<ItemListWidget> {
+class _ShoppingItemListState extends State<ShoppingItemList> {
   @override
   Widget build(BuildContext context) {
     return Container(
