@@ -8,7 +8,7 @@ import 'shopping_item_list.dart';
 import '../model/shopping_item.dart';
 import '../service/shopping_item_service.dart';
 
-var uuid = Uuid();
+const uuid = Uuid();
 var logger = Logger();
 
 class HomePage extends StatefulWidget {
